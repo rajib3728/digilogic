@@ -193,14 +193,16 @@ function flipfloplogic()
     {
     if(clk==1)
     {
-        document.getElementById("result").value=d;
+        document.getElementById("result").innerHTML=d;
     }
     else
     {
-        document.getElementById("result").value="No Change";
+        document.getElementById("result").innerHTML="No Change";
     }   
     }
 }
+
+
 
 
 
