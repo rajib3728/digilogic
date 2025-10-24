@@ -147,7 +147,7 @@ function xnorlogic()
     } 
 }  
 }
-function multiplexorlogic()
+function multiplexerlogic()
 {
     var a = document.getElementById("inputA").value;
     var b = document.getElementById("inputB").value;    
@@ -200,6 +200,7 @@ function flipfloplogic()
     }   
     }
 }
+
 
 
 
