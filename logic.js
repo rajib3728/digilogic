@@ -152,29 +152,30 @@ function multiplexerlogic()
     var a = document.getElementById("inputA").value;
     var b = document.getElementById("inputB").value;    
     var sel = document.getElementById("inputC").value.split(",");
+  
 
-    if( a=="" || b=="" || sel=="" || isNaN(a) || isNaN(b) || isNaN(sel) || (a!=0 && a!=1) || (b!=0 && b!=1) || sel.length!=4 )
+    if( a=="" || b=="" || isNaN(a) || isNaN(b) || (a!=0 && a!=1) || (b!=0 && b!=1) || sel.length!=4 )
     {
-        alert("Please enter valid binary inputs (0 or 1).");
+        alert("Please enter valid binary inputs (0 or 1) or syntax.");
         return;
     }
     else
     {
     if(a==0 && b==0)
     {
-        document.getElementById("result").value=sel[0];
+        document.getElementById("result").innerHTML=sel[0];
     }
     else if(a==0 && b==1)
     {
-        document.getElementById("result").value=sel[1];
+        document.getElementById("result").innerHTML=sel[1];
     }
     else if(a==1 && b==0)
     {
-        document.getElementById("result").value=sel[2];
+        document.getElementById("result").innerHTML=sel[2];
     }   
     else
     {
-        document.getElementById("result").value=sel[3];
+        document.getElementById("result").innerHTML=sel[3];
     }
 }
 
@@ -200,6 +201,7 @@ function flipfloplogic()
     }   
     }
 }
+
 
 
 
