@@ -1,0 +1,127 @@
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.txt1
+
+{
+    font-size: 2em;
+    color: #3a6dba;
+    margin-top: 60px;
+}
+.img1
+{
+    width: 230px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  /* Container for the loading bar */
+    .loading-container {
+      width: 100%; /* Full width */
+      max-width: 200px; /* Optional: Limit the width */
+      height: 7px; /* Height of the bar */
+      background-color: #e0e0e0; /* Light gray background */
+      border-radius: 10px; /* Rounded corners */
+      overflow: hidden; /* Prevent overflow of the inner bar */
+      margin: 40px auto; /* Center the container */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+
+    /* The animated loading bar */
+    .loading-bar {
+      height: 100%; /* Full height of the container */
+      width: 0%; /* Start with 0% width */
+      background-color: #3a6dba; /* Green color */
+      animation: loading 5s infinite; /* Animation: 2 seconds, infinite loop */
+    }
+
+    /* Keyframes for the loading animation */
+    @keyframes loading {
+      0% {
+        width: 0%; /* Start at 0% width */
+      }
+      100% {
+        width: 100%; /* Expand to full width */
+      }
+      /*100% {
+        width: 0%; /* Shrink back to 0%
+      }*/
+    }
+
+
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:rgb(62, 61, 61);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #3a6dba;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #3a6dba;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.img2
+{
+    width: 100px;
+    height: 100px;
+}
+.btn1
+{
+    margin: 1px;
+}
+.txt2
+{
+    color:whitesmoke;
+}
+.btn2
+{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+  .stat
+  {
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: white;
+    
+  }

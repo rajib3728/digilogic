@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" type="image/png" href="logo.jpg">
+    <title>DigiLOgic</title>
+</head>
+<body style="background-color:#3a6dba; color:white;">
+    <center><h1>NAND Gate</h1>
+         <button onclick="history.back()" class="btn2" ><i class="fa fa-arrow-left"></i> Back</button>
+    <br>
+      <br>
+     <div class="container">   
+        <img src="nandgate.png" alt="Logic Image" class="img1">
+    </div>
+     <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input A" id="inputA">
+    <br>
+    <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input B" id="inputB">
+    <br>
+    <br>
+    <button class="btn2" onclick="nandlogic()">Result</button>
+    <br>
+    <br>
+     <div class="stat"></div>
+   
+    <h5 id="result">Green:On Red:Off</h5>
+    <p>
+        A NAND gate (Not AND gate) is a digital logic gate that produces an output which is false only when all its inputs are true. 
+        In other words, it performs the inverse operation of an AND gate. If at least one of the inputs is false, the output will be true. 
+        NAND gates are widely used in digital circuits and computing due to their versatility, as they can be combined to create any other 
+        type of logic gate.
+    </p>
+
+    
+    </center>
+
+    
+<script src="logic.js"></script>
+    
+</body>
+</html>

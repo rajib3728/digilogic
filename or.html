@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" type="image/png" href="logo.jpg">
+    <title>DigiLOgic</title>
+</head>
+<body style="background-color:#3a6dba; color:white;">
+    <center><h1>OR Gate</h1>
+         <button onclick="history.back()" class="btn2" ><i class="fa fa-arrow-left"></i> Back</button>
+    <br>
+      <br>
+     <div class="container">   
+        <img src="orgate.png" alt="Logic Image" class="img1">
+    </div>
+     <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input A" id="inputA">
+    <br>
+    <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input B" id="inputB">
+    <br>
+    <br>
+    <button class="btn2" onclick="orlogic()">Result</button>
+    <br>
+    <br>
+    
+    <div class="stat"></div>
+   
+    <h5 id="result">Green:On Red:Off</h5>
+    <p>
+        An OR gate is a fundamental digital logic gate that implements logical disjunction. It produces a true (1 or HIGH) output 
+        when at least one of its inputs is true. If both inputs are false (0 or LOW), the output will be false. The OR gate is widely 
+        used in digital circuits and computing for various applications, including decision-making processes and control systems.
+    </p>
+    </center>
+
+    
+    <script src="logic.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" type="image/png" href="logo.jpg">
+    <title>DigiLOgic</title>
+</head>
+<body style="background-color:#3a6dba; color:white;">
+    <center><h1>NOR Gate</h1>
+         <button onclick="history.back()" class="btn2" ><i class="fa fa-arrow-left"></i> Back</button>
+    <br>
+      <br>
+     <div class="container">   
+        <img src="norgate.png" alt="Logic Image" class="img1">
+    </div>
+     <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input A" id="inputA">
+    <br>
+    <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input B" id="inputB">
+    <br>
+    <br>
+    <button class="btn2" onclick="norlogic()">Result</button>
+    <br>
+    <br>
+     <div class="stat"></div>
+    <h5 id="result">Green:On Red:Off</h5>
+    <p>
+        A NOR gate (Not OR gate) is a digital logic gate that produces an output which is true only when all its inputs are false. 
+        In other words, it performs the inverse operation of an OR gate. If at least one of the inputs is true, the output will be false. 
+        NOR gates are considered universal gates because they can be used to create any other type of logic gate, making them essential 
+        components in digital circuits and computing.
+    </p>
+    </center>
+
+    
+    <script src="logic.js"></script>
+    
+</body>
+</html>

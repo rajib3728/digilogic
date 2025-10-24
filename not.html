@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" type="image/png" href="logo.jpg">
+    <title>DigiLOgic</title>
+</head>
+<body style="background-color:#3a6dba; color:white;">
+    <center><h1>NOT Gate</h1>
+         <button onclick="history.back()" class="btn2" ><i class="fa fa-arrow-left"></i> Back</button>
+    <br>
+      <br>
+     <div class="container">   
+        <img src="notgate.png" alt="Logic Image" class="img1">
+    </div>
+     <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input A" id="inputA">
+   
+    <br>
+    <br>
+    <button class="btn2" onclick="notlogic()">Result</button>
+    <br>
+    <br>
+    <div class="stat"></div>
+    <h5 id="result">Green:On Red:Off</h5>
+    <p>
+        A NOT gate, also known as an inverter, is a fundamental digital logic gate that performs logical negation. 
+        It takes a single input and produces an output that is the opposite of the input. If the input is true (1 or HIGH), 
+        the output will be false (0 or LOW), and vice versa. NOT gates are commonly used in digital circuits and computing 
+        for various applications, including signal inversion and control systems.
+    </p>
+    </center>
+
+    
+<script src="logic.js"></script>
+    
+</body>
+</html>
