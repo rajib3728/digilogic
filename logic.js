@@ -183,6 +183,13 @@ function flipfloplogic()
 {   
     var clk = document.getElementById("clock").value;
     var d = document.getElementById("dinput").value;
+    if( clk=="" || d=="" || isNaN(clk) || isNaN(d) || (clk!=0 && clk!=1) || (d!=0 && d!=1) )
+    {
+        alert("Please enter valid binary inputs (0 or 1).");
+        return;
+    }
+    else
+    {
     if(clk==1)
     {
         document.getElementById("result").value=d;
@@ -191,6 +198,8 @@ function flipfloplogic()
     {
         document.getElementById("result").value="No Change";
     }   
+    }
 }
+
 
 
