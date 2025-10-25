@@ -7,6 +7,21 @@
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="shortcut icon" type="image/png" href="logo.jpg">
     <title>DigiLOgic</title>
+       <style>
+.container1 {
+  text-align: center;
+}
+#freqRange {
+  width: 100px;
+  margin: 20px;
+}
+canvas {
+  margin-top: 20px;
+  background: #222;
+  border: 1px solid #555;
+}
+
+  </style>
 </head>
 <body style="background-color:#3a6dba; color:white;">
     <center><h1>Flipflop</h1>
@@ -16,13 +31,26 @@
      <div class="container">   
         <img src="flipflop.png" alt="Logic Image" class="img1">
     </div>
+   
     <br>
-    <label>Enter Inputs:</label>
-    <input type="text" placeholder="clock"   id="clock">
-    <br>
-    <br>
+
     <label>Enter Inputs:</label>
     <input type="text" placeholder="dinput"  id="dinput">
+    
+    <div class="container1">
+    
+
+
+
+    <label for="freqRange">Frequency: <span id="freqLabel">1Hz</span></label>
+    
+    <input type="range" id="freqRange" min="0.5" max="10" step="0.5" value="1" />
+    <br>
+       <h4>clock</h4>
+        <canvas id="waveform" width="200" height="150"></canvas>
+        <br>
+        <div id="signal" class="low">LOW</div>
+  </div>
     <br>
     <br>
     <button class="btn2" onclick="flipfloplogic()">Result</button>
@@ -31,7 +59,10 @@
         <h2>Result</h2>
     <h5 id="result"></h5>
     <p>
-        A flip-flop is a fundamental digital memory circuit used to store a single bit of data. It has two stable states, representing binary 0 and 1, and can change states based on input signals. Flip-flops are commonly used in sequential logic circuits for data storage, synchronization, and state retention. They are essential components in registers, counters, and memory devices within digital systems.
+        A flip-flop is a fundamental digital memory circuit used to store a single bit of data. It has two stable states, 
+        representing binary 0 and 1, and can change states based on input signals. Flip-flops are commonly used in sequential 
+        logic circuits for data storage, synchronization, and state retention. They are essential components in registers, counters, 
+        and memory devices within digital systems.
     </p>
     </center>
     
@@ -40,5 +71,6 @@
     
 </body>
 </html>
+
 
 
