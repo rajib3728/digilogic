@@ -182,16 +182,18 @@ function multiplexerlogic()
 }
 function flipfloplogic()
 {   
-    var clk = document.getElementById("clock").value;
+    
     var d = document.getElementById("dinput").value;
-    if( clk=="" || d=="" || isNaN(clk) || isNaN(d) || (clk!=0 && clk!=1) || (d!=0 && d!=1) )
+    var clk = document.getElementById("signal").textContent;
+
+    if( d=="" || isNaN(d) || (d!=0 && d!=1) )
     {
         alert("Please enter valid binary inputs (0 or 1).");
         return;
     }
     else
     {
-    if(clk==1)
+    if(clk=="HIGH")
     {
         document.getElementById("result").innerHTML=d;
     }
@@ -200,7 +202,57 @@ function flipfloplogic()
         document.getElementById("result").innerHTML="No Change";
     }   
     }
+
 }
+
+const signal = document.getElementById("signal");
+const freqRange = document.getElementById("freqRange");
+const freqLabel = document.getElementById("freqLabel");
+const canvas = document.getElementById("waveform");
+const ctx = canvas.getContext("2d");
+
+let isHigh = false;
+let frequency = parseFloat(freqRange.value);
+let interval = 1000 / frequency / 2;
+let waveform = [];
+
+function updateSignal() {
+  isHigh = !isHigh;
+  signal.textContent = isHigh ? "HIGH" : "LOW";
+  signal.className = isHigh ? "high" : "low";
+
+  waveform.push(isHigh ? 1 : 0);
+  if (waveform.length > canvas.width / 10) waveform.shift();
+  drawWaveform();
+}
+
+function drawWaveform() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.moveTo(0, canvas.height / 2);
+
+  waveform.forEach((level, i) => {
+    const x = i * 10;
+    const y = level ? 30 : 120;
+    ctx.lineTo(x, y);
+    ctx.lineTo(x + 10, y);
+  });
+
+  ctx.strokeStyle = "#0f0";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+
+let timer = setInterval(updateSignal, interval);
+
+freqRange.addEventListener("input", () => {
+  frequency = parseFloat(freqRange.value);
+  freqLabel.textContent = `${frequency}Hz`;
+  clearInterval(timer);
+  interval = 1000 / frequency / 2;
+  timer = setInterval(updateSignal, interval);
+});
+
 
 
 
