@@ -274,14 +274,26 @@ function daclogic()
 function adclogic()
 {
     var analogInput = document.getElementById("inputC").value;  
-    if( analogInput=="" || isNaN(analogInput) || analogInput<0 || analogInput>7 )
+    if( analogInput=="" || isNaN(analogInput) || analogInput<0  )
     {
         alert("Please enter a valid analog input (0-7).");
         return;
     }
     else
     {
-    var binaryValue = analogInput.toString(2).padStart(3, '0');
+        function convertDecimalToBinary(decimalNumber) {
+    if (decimalNumber === 0) {
+        // Base case: Return "0" if the number is 0
+        return "0";
+    } else {
+        // Recursive case: Divide the number by 2, 
+        //append the remainder to the result of the recursive call
+        return convertDecimalToBinary(
+            Math.floor(decimalNumber / 2)) + (decimalNumber % 2);
+
+    }
+}
+    var binaryValue = convertDecimalToBinary(analogInput);
     document.getElementById("result").innerHTML = "Digital Output: " + binaryValue;
     }   
 }
