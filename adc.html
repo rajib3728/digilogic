@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" type="image/png" href="logo.jpg">
+    <title>DigiLOgic</title>
+</head>
+<body style="background-color:#3a6dba; color:white;">
+    <center><h1>Analog to Digital</h1>
+         <button onclick="history.back()" class="btn2" ><i class="fa fa-arrow-left"></i> Back</button>
+    <br>
+      <br>
+     <div class="container">   
+        <img src="adc.png" alt="Logic Image" class="img1">
+    </div>
+    <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input (0-7)" id="inputC">
+    <br>
+    <br>
+    
+    <button class="btn2" onclick="adclogic()">Result</button>
+    <br>
+    <br>
+       <h2>Result:</h2>
+    <h5 id="result"></h5>
+    <p>
+        Aalog to-Digital Converters (ADCs) are electronic devices that convert continuous analog signals into discrete digital values. 
+        This conversion process involves sampling the analog signal at regular intervals and quantizing the sampled values into binary
+         numbers that can be processed by digital systems.
+    </center>
+    
+    
+
+    <script src="logic.js"></script>
+</body>
+</html>

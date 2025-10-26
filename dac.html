@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" type="image/png" href="logo.jpg">
+    <title>DigiLOgic</title>
+</head>
+<body style="background-color:#3a6dba; color:white;">
+    <center><h1>Digital to Analog</h1>
+         <button onclick="history.back()" class="btn2" ><i class="fa fa-arrow-left"></i> Back</button>
+    <br>
+      <br>
+     <div class="container">   
+        <img src="dac.png" alt="Logic Image" class="img1">
+    </div>
+    <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input S0(LSB)" id="inputA">
+    <br>
+    <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input S1" id="inputB">
+    <br>
+    <br>
+    <label>Enter Inputs:</label>
+    <input type="text" placeholder="Input S2(MSB)" id="inputC">
+    <br>
+    <br>
+    
+    <button class="btn2" onclick="daclogic()">Result</button>
+    <br>
+    <br>
+       <h2>Result:</h2>
+    <h5 id="result"></h5>
+    <p>
+        Digital-to-Analog Converters (DACs) are electronic devices that convert discrete digital values into continuous analog signals. 
+        This conversion process involves taking binary numbers, which represent specific voltage levels or current values, 
+        and transforming them into corresponding analog waveforms that can be used in various applications such as audio playback, 
+        video display, and signal processing.
+    </center>
+    
+    
+
+    <script src="logic.js"></script>
+</body>
+</html>
