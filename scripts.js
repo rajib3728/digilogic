@@ -40,4 +40,13 @@ function multiplexorfun()
 function flipflopfun()
 {
     window.location.href="flipflop.html";
+
 }
+function adcfun()
+{
+    window.location.href="adc.html";
+}
+function dacfun()
+{
+    window.location.href="dac.html";
+}   
