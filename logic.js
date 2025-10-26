@@ -253,6 +253,43 @@ freqRange.addEventListener("input", () => {
   timer = setInterval(updateSignal, interval);
 });
 
+function daclogic()
+{
+    var s0= document.getElementById("inputA").value;
+    var s1= document.getElementById("inputB").value;
+    var s2= document.getElementById("inputC").value;
+
+    if( s0=="" || s1=="" || s2=="" || isNaN(s0) || isNaN(s1) || isNaN(s2) || (s0!=0 && s0!=1) || (s1!=0 && s1!=1) || (s2!=0 && s2!=1) )
+    {
+        alert("Please enter valid binary inputs (0 or 1).");
+        return;
+    }
+    else
+    {
+    var decimalValue = (s2 * 4) + (s1 * 2) + (s0 * 1);
+  
+    document.getElementById("result").innerHTML = "Analog Value: " + decimalValue;
+    }
+}
+function adclogic()
+{
+    var analogInput = document.getElementById("inputC").value;  
+    if( analogInput=="" || isNaN(analogInput) || analogInput<0 || analogInput>7 )
+    {
+        alert("Please enter a valid analog input (0-7).");
+        return;
+    }
+    else
+    {
+    var binaryValue = analogInput.toString(2).padStart(3, '0');
+    document.getElementById("result").innerHTML = "Digital Output: " + binaryValue;
+    }   
+}
+
+
+
+
+
 
 
 
